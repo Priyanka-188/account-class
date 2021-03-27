@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class account
+{
+private:
+    int acc_no;
+    int adhar_no;
+    string name;
+public:
+    string branch;
+    void setdata(int acc_number,int adhar_number, string name1);
+    void getdata()
+    {
+        cout<<"Account number is:"<<acc_no<<endl;
+        cout<<"Adhar number is:"<<adhar_no<<endl;
+        cout<<"Name of candidate is:"<<name<<endl;
+        cout<<"Branch name is:"<<branch<<endl;
+
+    }
+};
+ void account::setdata(int acc_number, int adhar_number,string name1)
+ {
+     acc_no=acc_number;
+     adhar_no= adhar_number;
+     name=name1;
+ }
+int main()
+{
+    account SBI;
+    SBI.branch= "Mahender garh bb";
+    SBI.setdata(546132,4564248,"Priyanka");
+    SBI.getdata();
+
+    cout<<endl;
+
+    account HDFC;
+    HDFC.branch="NNL";
+    HDFC.setdata(999999,96454545,"sittal");
+    HDFC.getdata();
+    return 0;
+
+}
